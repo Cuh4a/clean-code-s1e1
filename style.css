@@ -42,6 +42,7 @@
 
 .task-row-wrapper {
   display: flex;
+  padding-top: 30px;
 }
 
 .list {
