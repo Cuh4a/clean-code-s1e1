@@ -46,11 +46,13 @@
   padding: 0px;
 }
 
-.item, .subtitle {
+.item, 
+.subtitle {
   list-style: none;
 }
 
-.inpt ,.btn{
+.inpt,
+.btn{
   outline: none;
 }
 
