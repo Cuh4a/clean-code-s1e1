@@ -123,22 +123,22 @@
   align-items: center;
 }
 
-.item > * {
+.item  {
   vertical-align: middle;
 }
 
-.item > .inpt[type="checkbox"] {
+.item .inpt[type="checkbox"] {
   margin: 0 10px;
 }
 
-.item > .lbl {
+.item .lbl {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-.item > .inpt[type="text"] {
+.item .inpt[type="text"] {
   width: 226px;
 }
 
