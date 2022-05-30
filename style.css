@@ -73,6 +73,7 @@
 .btn:hover {
   color: #3a3A3a;
 }
+
 /* Heading */
 .subtitle,
 .lbl[for="new-task"] {
@@ -101,6 +102,7 @@
 .inpt[type="text"]:focus {
   color: #333;
 }
+
 /* New Task */
 .lbl[for="new-task"] {
   display: block;
@@ -110,6 +112,7 @@
 .inpt#new-task {
   width: 318px;
 }
+
 /* Task list */
 .item {
   overflow: hidden;
@@ -148,11 +151,13 @@
 .btn.delete .image:hover {
   transform: rotateZ(0);
 }
+
 /* Completed */
 .list#completed-tasks .lbl {
   text-decoration: line-through;
   color: #888;
 }
+
 /* Edit Task */
 .list .item .inpt[type=text] {
   display: none;
