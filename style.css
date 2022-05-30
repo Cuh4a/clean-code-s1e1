@@ -16,7 +16,7 @@
   width: 100%;
 }
 
-.header .more-inf {
+.header .link-info {
   font-family: fantasy, cursive;
 }
 
@@ -28,7 +28,7 @@
 
 }
 
-.centered-main-page-element {
+.mainly {
   display: block;
   width: 500px;
   margin: 0 auto 0;
@@ -40,7 +40,7 @@
   flex-grow: 1;
 }
 
-.task-row-wrapper {
+.wrapper {
   display: flex;
   padding-top: 30px;
 }
@@ -142,18 +142,18 @@
   width: 226px;
 }
 
-.btn.delete .image {
+.btn.del-btn .image {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.btn.delete .image:hover {
+.btn.del-btn .image:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-.list#completed-tasks .lbl {
+.list#completedtasks .lbl {
   text-decoration: line-through;
   color: #888;
 }
