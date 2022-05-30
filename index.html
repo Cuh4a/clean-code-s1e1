@@ -9,53 +9,50 @@
 
 <body class="home">
   <header class="header">
-    <img class="img-hdr" src="./eisenhower-matrix.jpg" alt="The Eisenhower matrix">
-    <a class="link-info" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details ?</a>
+    <img class="header__img" src="./eisenhower-matrix.jpg" alt="The Eisenhower matrix">
+    <a class="header__link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details ?</a>
   </header>
 
   <main class="mainly">
-    <section>
-      <h3 class="subtitle" id="toptitle">Add Item </h3>
-      <div class="wrapper">
-        <input id="new-task" class="task inpt" type="text">
-        <button class="btn">Add</button>
+    <section class="contaier-add">
+      <h3 class="contaier-add__subtitle subtitle">Add Item </h3>
+      <div class="contaier-add__wrapper-input">
+        <input class="contaier-add__input input" type="text"> 
+        <button class="contaier-add__btn btn">Add</button>
       </div>
     </section>
-
-    <section>
-      <h3 class="subtitle">Todo</h3>
-      <ul class="list" id="completetasks">
-        <li class="item">
-          <input class="inpt" type="checkbox">
-          <label class="task lbl">Pay Bills</label>
-          <input class="task inpt" type="text" >
-          <button class="edit-btn btn">Edit</button>
-          <button class="del-btn btn"><img class="image" src="./remove.svg" alt="Del button"></button>
+    <section class="contaier-todo">
+      <h3 class="contaier-todo__subtitle subtitle">Todo</h3>
+      <ul class="list contaier-todo__list">
+        <li class="list-item contaier-todo__list-item">
+          <input class="input list-item__checkbox" type="checkbox">
+          <label class="list-item__lbl">Pay Bills</label>
+          <input class="list-item__text input" type="text" >
+          <button class="edit-btn list-item__edit-btn btn">Edit</button>
+          <button class="list-del-btn btn"><img class="list-item__btn-image" src="./remove.svg" alt="Del button"></button>
         </li>
-        <li class="editmode item">
-          <input class="inpt" type="checkbox">
-          <label class="task lbl">Go Shopping</label>
-          <input class="task inpt" type="text" value="Go shopping">
-          <button class="edit-btn btn">Save</button>
-          <button class="del-btn btn"><img class="image" src="./remove.svg" alt="Del button"></button>
+        <li class="list-item contaier-todo__list-item list-item__mode">
+          <input class="input list-item__checkbox" type="checkbox">
+          <label class="list-item__lbl">Go Shopping</label>
+          <input class="list-item__text input" type="text" value="Go shopping">
+          <button class="edit-btn list-item__edit-btn btn">Save</button>
+          <button class="list-del-btn btn"><img class="list-item__btn-image" src="./remove.svg" alt="Del button"></button>
         </li>
       </ul>
     </section>
-
-    <section>
-      <h3 class="subtitle">Completed</h3>
-      <ul class="list" id="completedtasks">
-        <li class="item">
-          <input class="inpt" type="checkbox" checked>
-          <label class="task lbl">See the Doctor</label>
-          <input class="task inpt" type="text">
-          <button class="edit-btn btn">Edit</button>
-          <button class="del-btn btn"><img class="image" src="./remove.svg" alt="Del button"></button>
+    <section class="contaier-comleted">
+      <h3 class="contaier-comleted__subtitle subtitle">Completed</h3>
+      <ul class="contaier-comleted__list list">
+        <li class="list-item contaier-comleted__list-item">
+          <input class="input list-item__checkbox" type="checkbox" checked>
+          <label class="list-item__lbl">See the Doctor</label>
+          <input class="list-item__text input" type="text">
+          <button class="edit-btn list-item__edit-btn btn">Edit</button>
+          <button class="list-del-btn btn"><img class="list-item__btn-image" src="./remove.svg" alt="Del button"></button>
         </li>
       </ul>
     </section>
   </main>
-
   <script src="app.js"></script>
 </body>
 </html>

@@ -8,28 +8,28 @@
 
 // Event handling, user interaction is what starts the code execution.
 
-var taskInput = document.getElementById("new-task");//Add a new task.
-var addButton = document.getElementsByTagName("button")[0];//first button
-var incompleteTaskHolder = document.getElementById("completetasks");//ul of #incompleteTasks
-var completedTasksHolder = document.getElementById("completedtasks");//completed-tasks
+var taskInput = document.querySelector(".contaier-add__input");//Add a new task.
+var addButton = document.querySelector(".contaier-add__btn");//first button
+var incompleteTaskHolder = document.querySelector(".contaier-todo__list");//ul of #incompleteTasks
+var completedTasksHolder = document.querySelector(".contaier-comleted__list");//completed-tasks
 
 //New task list item
 var createNewTaskElement = function (taskString) {
 
     var listItem = document.createElement("li");
-    listItem.classList.add("item")
+    listItem.classList.add("list-item")
 
     //input (checkbox)
     var checkBox = document.createElement("input");//checkbx
-    checkBox.classList.add("inpt")
+    checkBox.classList.add("list-item__checkbox")
 
     //label
     var label = document.createElement("label");//label
-    label.classList.add("lbl")
+    label.classList.add("list-item__lbl")
 
     //input (text)
     var editInput = document.createElement("input");//text
-    editInput.classList.add("inpt")
+    editInput.classList.add("list-item__text")
 
     //button.edit
     var editButton = document.createElement("button");//edit button
@@ -39,20 +39,21 @@ var createNewTaskElement = function (taskString) {
     var deleteButton = document.createElement("button");//delete button
     deleteButton.classList.add("btn")
     var deleteButtonImg = document.createElement("img");//delete button image
-    deleteButtonImg.classList.add("image")
+    deleteButtonImg.classList.add("list-item__btn-image")
     
     label.innerText = taskString;
-    label.className  = "task lbl";
+    label.className = "list-item__lbl";
 
     //Each elements, needs appending
     checkBox.type = "checkbox";
     editInput.type = "text";
-    editInput.className = "task inpt";
+    editInput.className = "list-item__input input";
 
     editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className = "edit-btn btn";
+    editButton.className = "edit-btn btn input"; 
 
-    deleteButton.className = "del-btn btn";
+
+    deleteButton.className = "list-del-btn btn";
     deleteButtonImg.src = "./remove.svg";
     deleteButton.appendChild(deleteButtonImg);
 
@@ -88,13 +89,12 @@ var editTask = function () {
 
     var listItem = this.parentNode;
 
-    var editInput = listItem.querySelector("input[type=text]");
+    var editInput = listItem.querySelector(".list-item__text");
     var label = listItem.querySelector("label");
     var editBtn = listItem.querySelector(".edit-btn");
-    var containsClass = listItem.classList.contains("editmode");
+    var containsClass = listItem.classList.contains("list-item__mode");
     //If class of the parent is .editmode
     if (containsClass) {
-
         //switch to .editmode
         //label becomes the inputs value.
         label.innerText = editInput.value;
@@ -105,7 +105,7 @@ var editTask = function () {
     }
 
     //toggle .editmode on the parent.
-    listItem.classList.toggle("editmode");
+    listItem.classList.toggle("list-item__mode");
 };
 
 
@@ -163,7 +163,7 @@ var bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
     //select ListItems children
     var checkBox = taskListItem.querySelector("input[type=checkbox]");
     var editButton = taskListItem.querySelector("button.edit-btn");
-    var deleteButton = taskListItem.querySelector("button.del-btn");
+    var deleteButton = taskListItem.querySelector("button.list-del-btn");
 
 
     //Bind editTask to edit button.
@@ -199,3 +199,4 @@ for (var i = 0; i < completedTasksHolder.children.length; i++){
 //prevent creation of empty tasks.
 
 //Change edit to save when you are in edit mode.
+alert("Привет!!! Работу немного не успел доделать, доделаю за пару дней и сброшу выполненую работу!")

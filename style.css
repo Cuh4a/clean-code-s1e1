@@ -12,12 +12,12 @@
   text-align: right;
 }
 
-.img-hdr {
+.header__img {
   width: 100%;
 }
 
 .header,
-.link-info {
+.header__link{
   font-family: fantasy, cursive;
 }
 
@@ -35,32 +35,36 @@
   margin: 0 auto 0;
 }
 
-.task {
+.contaier-add__input,
+.list-item__text,
+.list-item__lbl {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
 
-.wrapper {
+.contaier-add__wrapper-input {
   display: flex;
   padding-top: 30px;
 }
 
+.contaier-todo__list,
 .list {
   margin: 0;
   padding: 0px;
 }
 
-.item, 
+.list-item, 
 .subtitle {
   list-style: none;
 }
 
-.inpt,
+.list-item__edit-btn,
+.input,
 .btn{
   outline: none;
 }
-
+.list-item__edit-btn,
 .btn {
   background: none; 
   border: 0px;
@@ -76,8 +80,7 @@
 }
 
 /* Heading */
-.subtitle,
-.lbl[for="new-task"] {
+.subtitle {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -87,7 +90,7 @@
   text-transform: uppercase;
 }
 
-.inpt[type="text"] {
+.input[type="text"] {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -100,22 +103,17 @@
   color: #888;
 }
 
-.inpt[type="text"]:focus {
+.input[type="text"]:focus {
   color: #333;
 }
 
-/* New Task */
-.lbl[for="new-task"] {
-  display: block;
-  margin: 0 0 20px;
-}
-
-.inpt#new-task {
+.input.contaier-add__input {
   width: 318px;
+  
 }
 
 /* Task list */
-.item {
+.list-item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -124,51 +122,57 @@
   align-items: center;
 }
 
-.item  {
+.list-item {
   vertical-align: middle;
 }
-
-.item .inpt[type="checkbox"] {
+.list-item__checkbox {
   margin: 0 10px;
 }
 
-.item .lbl {
+.list-item .list-item__lbl {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-.item .inpt[type="text"] {
+
+.list-item .list-item__text {
   width: 226px;
+
 }
 
-.btn.del-btn .image {
+.list-item__btn-image{
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.btn.del-btn .image:hover {
+.list-item__btn-image:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-.list#completedtasks .lbl {
+.list.contaier-comleted__list .list-item__lbl {
   text-decoration: line-through;
   color: #888;
+  
 }
+
 
 /* Edit Task */
-.list .item .inpt[type=text] {
+.list .list-item .input[type=text] {
   display: none;
+
 }
 
-.list .item.editmode .inpt[type=text] {
+.list-item.list-item__mode .input[type=text] {
   display: inline-block;
   width: 224px;
+  
 }
 
-.list .item.editmode .lbl {
+.list-item__mode .list-item__lbl {
   display: none;
+    
 }
