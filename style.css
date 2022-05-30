@@ -16,7 +16,8 @@
   width: 100%;
 }
 
-.header .link-info {
+.header,
+.link-info {
   font-family: fantasy, cursive;
 }
 
