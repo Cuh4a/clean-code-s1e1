@@ -11,11 +11,11 @@ var addButton = document.querySelector(".add-task__btn");//first button
 var incompleteTaskHolder = document.querySelector(".todo__list");//ul of #incompleteTasks
 var completedTasksHolder = document.querySelector(".completed__list");//completed-tasks
 
-
 //New task list item
 var createNewTaskElement = function (taskString) {
 
     var listItem = document.createElement("li");
+
     listItem.className = "todo__list-item list-item";
 
     //input (checkbox)
@@ -40,9 +40,11 @@ var createNewTaskElement = function (taskString) {
 
     //button.delete
     var deleteButton = document.createElement("button");//delete button
+
     deleteButton.className = "list-item__btn-delete btn";
 
     var deleteButtonImg = document.createElement("img");//delete button image
+
     deleteButtonImg.src = "./remove.svg";
     deleteButtonImg.alt = "Remove button";
     deleteButtonImg.className = "list-item__btn-img";

@@ -60,7 +60,7 @@
 .btn {
   outline: none;
 }
-
+.list-item__edit-btn,
 .btn {
   background: none;
   border: 0;
@@ -113,6 +113,7 @@
 /* New Task */
 .add-task__input {
   width: 318px;
+  
 }
 
 /* Task list */
@@ -142,6 +143,7 @@
 
 .list-item>.list-item__input-text {
   width: 226px;
+
 }
 
 .list-item__btn-delete .list-item__btn-img {
@@ -158,18 +160,23 @@
 .completed__list .list-item__label {
   text-decoration: line-through;
   color: #888;
+  
 }
+
 
 /* Edit Task */
 .list-item .list-item__input-text {
   display: none;
+
 }
 
 .list-item.todo__list-item-mode .list-item__input-text {
   display: inline-block;
   width: 224px;
+  
 }
 
 .todo__list-item-mode .list-item__label {
   display: none;
+    
 }
